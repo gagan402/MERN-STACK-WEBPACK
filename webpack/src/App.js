@@ -1,11 +1,19 @@
-import Address from "./Address";
-import Contact from "./Contact";
+// import Address from "./Address";
+// import Contact from "./Contact";
+import Card from "./cardComp/Card";
 function App() {
   return (
     <>
-    <h1>Hello Gagan</h1>
-    <Address/>
-    <Contact/>
+    <Card></Card>
+    <Card></Card>
+    <Card></Card>
+    <Card></Card>
+    <Card></Card>
+    <Card></Card>
+    <Card></Card>
+    <Card></Card>
+    <Card></Card>
+    <Card></Card>
     </>
     
   );

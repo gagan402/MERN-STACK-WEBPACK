@@ -1,0 +1,22 @@
+.crd{
+    width:200px;
+    height:500px;
+    background-color:pink;
+    border:1px solid black;
+    float:left;
+    margin:10px;
+    
+
+}
+
+.crdfont{
+    color:green;
+}
+
+.btn{
+    padding:10px;
+    border:1px solid black;
+    background-color:red;
+    width:100px;
+
+}
