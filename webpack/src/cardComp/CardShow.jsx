@@ -5,7 +5,7 @@ import Card from "./Card";
 import st1 from "./CardStyle1.module.css";
 import st2 from "./CardStyle2.module.css";
 import  JsonArray from "./JSONarry";
-
+// import FilterButtons from './FilterButtons';
 
 /*
 
@@ -92,24 +92,30 @@ function ProductCard(props)
 
 function CardShow() {
     // console.log(JsonArray);
+    function genCard(obj)
+    {
+        return (
+            //    <ProductCard company={obj.company}  price={obj.price} model={obj.model}  owner={obj.owner}>{obj.path}</ProductCard>
+            <ProductCard {...obj}  key={obj.owner}>
+                {
+                    obj.path
+                }
+            </ProductCard>
+         )
+
+    }
+
+
+
   return (
-     
-        <div style={{display:"flex","flex-wrap":"wrap"}  }>
+        <>
+        <div style={{display:"flex",flexWrap:"wrap"}  }>
          {/* <ProductCard company="Dell"  price="50000" model="Inspiron"  owner="gagan">Its Perfect and speed y Model.Must buy it</ProductCard> */}
          {
-            JsonArray.map((obj)=>
-            {
-                 return (
-                    //    <ProductCard company={obj.company}  price={obj.price} model={obj.model}  owner={obj.owner}>{obj.path}</ProductCard>
-                    <ProductCard {...obj}  key={obj.owner}>
-                        {
-                            obj.path
-                        }
-                    </ProductCard>
-                 )
-            })
+            JsonArray.map(genCard)
          }
          </div> 
+         </>
   )
 }
 
