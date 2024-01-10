@@ -1,13 +1,16 @@
 import React from "react";
 import JsonArray from "./JSONarry";
+import CardShow from "./CardShow";
 
 function FilterButtons() {
-  const ary = JsonArray.map((obj) => obj.company);
-  const Aset=new Set(ary);
-  const A= new Array(Aset);
-  console.log(A);
+  const set = new Set();
+  JsonArray.map((obj) => {
+    set.add(obj.company);
+  });
 
-
+  const ary = [...set];
+  console.log(set);
+  console.log(ary);
 
   function getBtn(obj) {
     return (
@@ -33,14 +36,28 @@ function FilterButtons() {
 
       <br></br>
       <hr></hr>
-      <div>
-        <select>{Aset.forEach((obj)=>
-        {
-            return(
-                <option value={obj}>{obj}</option>
-            )
-        })}</select>
-      </div>
+      <center>
+        <div>
+          <CompanyCombo data={ary}></CompanyCombo>
+        </div>
+      </center>
+    </>
+  );
+}
+
+function CompanyCombo({data}) {
+  return (
+    <>
+      <select>
+        {data.map((obj) => {
+          return (
+            <option key={obj} value={obj}>
+              {obj}
+            </option>
+          );
+        })}
+      </select>
+      <CardShow></CardShow>
     </>
   );
 }

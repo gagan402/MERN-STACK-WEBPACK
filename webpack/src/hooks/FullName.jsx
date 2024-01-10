@@ -3,9 +3,16 @@ import {useState} from 'react'
 function FullName() {
     const [fname,dofname]=useState("");
     const [lname,dolname]=useState("");
-
+    const [fullName,setName]=useState("what's your name?");
     const doUpdateLast=(ggn)=>{
        dolname(ggn.target.value);
+    }
+
+
+    const doJoin=()=>
+    {
+        const n=fname+" "+lname;
+        setName(n);
     }
 
   return (
@@ -20,13 +27,13 @@ function FullName() {
             Last Name :<input type="text"  onChange={doUpdateLast}/>
             <span>{lname}</span>
         </p>
-
         <p>
-            <input type="button" value="JOIN NAME"/>
-            <input type="text"/>
+        <input type="button" value="Join Name" onClick={doJoin}/>
+        <input type="text" value={fullName}/>
         </p>
-        
+
     </div>
+
     </>
   )
 }
