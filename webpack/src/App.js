@@ -6,16 +6,19 @@
   import Counter from "./hooks/Counter";
 import FullName from "./hooks/FullName";
 import FullNameObj from "./hooks/FullNameObj";
+import Pusefeft from "./hooks/Pusefeft";
+
 function App() {
   return (
     <>
     {/* <Card></Card>
     <Card></Card> */}
     {/* <CardShow> </CardShow> */}
-    <FilterButtons></FilterButtons>
+    {/* <FilterButtons></FilterButtons> */}
     {/* <Counter></Counter> */}
     {/* <FullName></FullName> */}
     {/* <FullNameObj></FullNameObj> */}
+    <Pusefeft></Pusefeft>
     </>
     
   );
