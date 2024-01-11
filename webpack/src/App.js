@@ -7,6 +7,8 @@
 import FullName from "./hooks/FullName";
 import FullNameObj from "./hooks/FullNameObj";
 import Pusefeft from "./hooks/Pusefeft";
+import ShockAndShake from "./hooks/ShockAndShake";
+import UseEffectPP from "./hooks/UseEffectPP";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
     {/* <Counter></Counter> */}
     {/* <FullName></FullName> */}
     {/* <FullNameObj></FullNameObj> */}
-    <Pusefeft></Pusefeft>
+    {/* <Pusefeft></Pusefeft> */}
+    {/* <UseEffectPP> </UseEffectPP> */}
+    <ShockAndShake> </ShockAndShake>
     </>
     
   );
