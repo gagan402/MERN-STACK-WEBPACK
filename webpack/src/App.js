@@ -9,6 +9,7 @@ import FullNameObj from "./hooks/FullNameObj";
 import Pusefeft from "./hooks/Pusefeft";
 import ShockAndShake from "./hooks/ShockAndShake";
 import UseEffectPP from "./hooks/UseEffectPP";
+import FrontPage from "./todolist/FrontPage";
 
 function App() {
   return (
@@ -16,13 +17,14 @@ function App() {
     {/* <Card></Card>
     <Card></Card> */}
     {/* <CardShow> </CardShow> */}
-    {/* <FilterButtons></FilterButtons> */}
+    <FilterButtons></FilterButtons>
     {/* <Counter></Counter> */}
     {/* <FullName></FullName> */}
     {/* <FullNameObj></FullNameObj> */}
     {/* <Pusefeft></Pusefeft> */}
     {/* <UseEffectPP> </UseEffectPP> */}
-    <ShockAndShake> </ShockAndShake>
+    {/* <ShockAndShake> </ShockAndShake> */}
+    {/* <FrontPage></FrontPage> */}
     </>
     
   );

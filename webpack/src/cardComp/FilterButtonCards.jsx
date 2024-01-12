@@ -4,10 +4,11 @@ import Card from "./Card";
 import st1 from "./CardStyle1.module.css";
 import st2 from "./CardStyle2.module.css";
 import JsonArray from "./JSONarry";
-function ProductCard(props) {
+import HOC_Promoted from "./HOC_Promoted";
+export function ProductCard(props) {
     return (
       <>
-        <div className={`${st1.crd} ${st1.crdfont}`}>
+        <div style={{backgroundColor:"pink"}}>
           <img src={props.path} className={st2.pic} />
           <p>Company:{props.company}</p>
           <p>Price :{props.price}</p>
@@ -24,11 +25,16 @@ function ProductCard(props) {
 
 function FilterButtonCards({data}) {
 
-
+  const PromotedCard=HOC_Promoted(ProductCard);
     function genCard(obj)
     {
         return (
-            //    <ProductCard company={obj.company}  price={obj.price} model={obj.model}  owner={obj.owner}>{obj.path}</ProductCard>
+
+           obj.promoted?<PromotedCard {...obj}  key={obj.owner}>
+                {
+                    obj.path
+                }
+            </PromotedCard>:
             <ProductCard {...obj}  key={obj.owner}>
                 {
                     obj.path
