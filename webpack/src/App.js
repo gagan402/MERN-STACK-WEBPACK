@@ -9,15 +9,17 @@ import FullNameObj from "./hooks/FullNameObj";
 import Pusefeft from "./hooks/Pusefeft";
 import ShockAndShake from "./hooks/ShockAndShake";
 import UseEffectPP from "./hooks/UseEffectPP";
+import UseREF from "./hooks/UseREF";
 import FrontPage from "./todolist/FrontPage";
-
+import HOCclickcounter from "./hooks/HOCclickcounter";
+import HOCmouseOverCounter from "./hooks/HOCmouseOverCounter";
 function App() {
   return (
     <>
     {/* <Card></Card>
     <Card></Card> */}
     {/* <CardShow> </CardShow> */}
-    <FilterButtons></FilterButtons>
+    {/* <FilterButtons></FilterButtons> */}
     {/* <Counter></Counter> */}
     {/* <FullName></FullName> */}
     {/* <FullNameObj></FullNameObj> */}
@@ -25,6 +27,10 @@ function App() {
     {/* <UseEffectPP> </UseEffectPP> */}
     {/* <ShockAndShake> </ShockAndShake> */}
     {/* <FrontPage></FrontPage> */}
+    {/* <UseREF></UseREF> */}
+    
+    <HOCclickcounter name={"Click Counter"}></HOCclickcounter>
+    <HOCmouseOverCounter name={"Mouse Over Counter"}></HOCmouseOverCounter>
     </>
     
   );
