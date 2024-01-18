@@ -13,6 +13,7 @@ import UseREF from "./hooks/UseREF";
 import FrontPage from "./todolist/FrontPage";
 import HOCclickcounter from "./hooks/HOCclickcounter";
 import HOCmouseOverCounter from "./hooks/HOCmouseOverCounter";
+import ConditionalRendering from "./ConditionalRendering";
 function App() {
   return (
     <>
@@ -29,8 +30,10 @@ function App() {
     {/* <FrontPage></FrontPage> */}
     {/* <UseREF></UseREF> */}
     
-    <HOCclickcounter name={"Click Counter"}></HOCclickcounter>
-    <HOCmouseOverCounter name={"Mouse Over Counter"}></HOCmouseOverCounter>
+    {/* <HOCclickcounter name={"Click Counter"}></HOCclickcounter> */}
+    {/* <HOCmouseOverCounter name={"Mouse Over Counter"}></HOCmouseOverCounter> */}
+
+    <ConditionalRendering></ConditionalRendering>
     </>
     
   );
