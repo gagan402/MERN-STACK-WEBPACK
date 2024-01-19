@@ -14,6 +14,7 @@ import FrontPage from "./todolist/FrontPage";
 import HOCclickcounter from "./hooks/HOCclickcounter";
 import HOCmouseOverCounter from "./hooks/HOCmouseOverCounter";
 import ConditionalRendering from "./ConditionalRendering";
+import Home from "./context/Home";
 function App() {
   return (
     <>
@@ -33,7 +34,8 @@ function App() {
     {/* <HOCclickcounter name={"Click Counter"}></HOCclickcounter> */}
     {/* <HOCmouseOverCounter name={"Mouse Over Counter"}></HOCmouseOverCounter> */}
 
-    <ConditionalRendering></ConditionalRendering>
+    {/* <ConditionalRendering></ConditionalRendering> */}
+    <Home></Home>
     </>
     
   );

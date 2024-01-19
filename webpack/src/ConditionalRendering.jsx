@@ -1,4 +1,6 @@
 import React from 'react'
+
+// Conditional rendering in ReactJS refers to the practice of rendering different parts of your component or UI based on certain conditions.
 //WaY1
 /*
 function Item({carry,importance,name})
