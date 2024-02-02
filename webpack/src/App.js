@@ -1,6 +1,7 @@
 // import Address from "./Address";
 // import Contact from "./Contact";
 // import Card from "./cardComp/Card";
+import 'bootstrap/dist/css/bootstrap.min.css';
   import CardShow from "./cardComp/CardShow";
   import FilterButtons from "./cardComp/FilterButtons";
   import Counter from "./hooks/Counter";
@@ -10,11 +11,12 @@ import Pusefeft from "./hooks/Pusefeft";
 import ShockAndShake from "./hooks/ShockAndShake";
 import UseEffectPP from "./hooks/UseEffectPP";
 import UseREF from "./hooks/UseREF";
-import FrontPage from "./todolist/FrontPage";
 import HOCclickcounter from "./hooks/HOCclickcounter";
 import HOCmouseOverCounter from "./hooks/HOCmouseOverCounter";
 import ConditionalRendering from "./ConditionalRendering";
 import Home from "./context/Home";
+import BScards from "./bootstrapp/BScards";
+import Profile from './bootstrapp/Profile';
 function App() {
   return (
     <>
@@ -28,14 +30,15 @@ function App() {
     {/* <Pusefeft></Pusefeft> */}
     {/* <UseEffectPP> </UseEffectPP> */}
     {/* <ShockAndShake> </ShockAndShake> */}
-    {/* <FrontPage></FrontPage> */}
     {/* <UseREF></UseREF> */}
     
     {/* <HOCclickcounter name={"Click Counter"}></HOCclickcounter> */}
     {/* <HOCmouseOverCounter name={"Mouse Over Counter"}></HOCmouseOverCounter> */}
 
     {/* <ConditionalRendering></ConditionalRendering> */}
-    <Home></Home>
+    {/* <Home></Home> */}
+    {/* <BScards></BScards> */}
+    <Profile></Profile>
     </>
     
   );
