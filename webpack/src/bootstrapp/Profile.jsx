@@ -15,6 +15,9 @@ import NoMatch from "./NoMatch";
 import Foooter from "./Foooter";
 import FilterButtons from "../cardComp/FilterButtons";
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+
+import {Offline,Online} from "react-detect-offline";
+
 function Profile() {
     const [validated, setValidated] = useState(false);
 
@@ -30,9 +33,18 @@ function Profile() {
   return (
     <>
     <BrowserRouter>
+   
     <Navbar fixed="top" expand="lg" bg="dark"  data-bs-theme="dark" className="bg-body-tertiary ">
       <Container fluid>
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+
+
+        <div style={{color:"white"}}>
+      <Online> You are Online! </Online>
+      <Offline> You are Offline!</Offline>
+    </div>
+   
+
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -69,7 +81,7 @@ function Profile() {
     </Routes>
 
 
-    </BrowserRouter>
+    
     <div className=" container p-5  border border-success  rounded-top  rounded-bottom m-5">
         
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -146,7 +158,9 @@ function Profile() {
 
   
     </div>
+    </BrowserRouter>
     <Foooter ></Foooter>
+
     </>
   )
 }

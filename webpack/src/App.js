@@ -17,6 +17,7 @@ import ConditionalRendering from "./ConditionalRendering";
 import Home from "./context/Home";
 import BScards from "./bootstrapp/BScards";
 import Profile from './bootstrapp/Profile';
+import LearnTailwind from './tailwindd/LearnTailwind';
 function App() {
   return (
     <>
@@ -38,7 +39,8 @@ function App() {
     {/* <ConditionalRendering></ConditionalRendering> */}
     {/* <Home></Home> */}
     {/* <BScards></BScards> */}
-    <Profile></Profile>
+    {/* <Profile></Profile> */}
+    <LearnTailwind></LearnTailwind>
     </>
     
   );
