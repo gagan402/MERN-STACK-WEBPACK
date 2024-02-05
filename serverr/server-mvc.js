@@ -34,3 +34,4 @@ mongoose.connect(server).then(
 app.use("/product",route);
 app.use("/d-product",route);
 app.use("/al-product",route);
+app.use("/u-product",route);
