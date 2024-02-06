@@ -18,6 +18,7 @@ import Home from "./context/Home";
 import BScards from "./bootstrapp/BScards";
 import Profile from './bootstrapp/Profile';
 import LearnTailwind from './tailwindd/LearnTailwind';
+import Learnaxios from './Learnaxios';
 function App() {
   return (
     <>
@@ -40,7 +41,8 @@ function App() {
     {/* <Home></Home> */}
     {/* <BScards></BScards> */}
     {/* <Profile></Profile> */}
-    <LearnTailwind></LearnTailwind>
+    {/* <LearnTailwind></LearnTailwind> */}
+    <Learnaxios></Learnaxios>
     </>
     
   );

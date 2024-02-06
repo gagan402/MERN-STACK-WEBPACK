@@ -5,7 +5,7 @@ function FullNameObj() {
     const [obj,setName]=useState({
         fn:"",
         ln:"",
-        full:"what"
+        full:""
     });
    
      function doUpdate(event)
@@ -27,19 +27,19 @@ function FullNameObj() {
   return (
     // name of feild should be same as property of object
     <>
-      <div>
-        <h1>FULL NAME APP</h1>
+      <div className="border border-black w-[500px] mx-auto p-2">
+        <h1 className="border border-danger p-1 m-2">FULL NAME APP</h1>
         <p>
-          First Name :<input type="text" name="fn" onChange={doUpdate} />
+          First Name :<input type="text" name="fn" className="border border-success m-2" onChange={doUpdate} />
           <span>{obj.fn}</span>
         </p>
         <p>
-          Last Name :<input type="text" name="ln" onChange={doUpdate} />
+          Last Name :<input type="text" name="ln" className="border border-success m-2" onChange={doUpdate} />
           <span>{obj.ln}</span>
         </p>
         <p>
-          <input type="button" value="Join Name" onClick={doJoin} />
-          <input type="text" value={obj.full} />
+          <input type="button" value="Join Name" className="border border-black bg-orange-700"onClick={doJoin} />
+          <input type="text" className="border border-success m-2"  value={obj.full} />
         </p>
 
         <p>

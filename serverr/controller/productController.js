@@ -5,6 +5,48 @@ const Pmodel=getProductModel();
 
 function doAddProducts(req,res)
 {
+    const doc=new Pmodel(req.query);
+    doc.save().then(
+        (docu)=>
+        {
+            // res.send(docu);
+            res.json({status:"true",rec:docu});
+            console.log("Data saved to mongoDB");
+        }
+    ).catch(
+        (err)=>
+        {
+            console.log(err.message);
+            // res.send(err.message);
+            res.json({
+                status:false,
+                err:err.message
+            });
+        }
+    );
+}
+function doAddProductsPost(req,res)
+{   
+    const doc=new Pmodel(req.body);
+    doc.save().then(
+        (docu)=>
+        {
+            // res.send(docu);
+            res.json({status:"true",rec:docu});
+            console.log("Data saved to mongoDB whole data");
+        }
+    ).catch(
+        (err)=>
+        {
+            console.log(err.message);
+            // res.send(err.message);
+            res.json({ggn:"not added",err:err.message});
+        }
+    );
+}
+
+function ddoAddProducts(req,res)
+{
     const doc=new Pmodel(req.body);
     doc.save().then(
         (docu)=>
@@ -26,21 +68,21 @@ function doAddProducts(req,res)
     );
 }
 
-
 function doDeleteProducts(req,res)
 {
-    Pmodel.deleteOne({item:req.body.item}).then(
+    Pmodel.deleteOne({item:req.query.item}).then(
         (results)=>
         {
             // res.send(results);
-            if(results.deleteCount==1)
-            {
-            res.json({status:true,res:results});
-            }
-            else{
-            res.json({status:false,message:"item not found"});
+            // if(results.deleteCount==1)
+            // {
+            // res.json({status:true,res:results});
+            // }
+            // else{
+            // res.json({status:false,message:"item not found"});
 
-            }
+            // }
+            res.json(results);
             console.log(results);
         }
     ).catch(
@@ -93,4 +135,4 @@ function doupdateProduct(req,res)
     )
 }
 
-module.exports={doAddProducts,doDeleteProducts,doAllProducts,doupdateProduct};
+module.exports={doAddProducts,doDeleteProducts,doAllProducts,doupdateProduct,ddoAddProducts,doAddProductsPost};
