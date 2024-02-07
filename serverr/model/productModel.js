@@ -7,7 +7,8 @@ let ProductSchema= mongoose.Schema(
         item:{type:String,required:true,unique:true,index:true},
         category:String,
         price:Number,
-        dop:{type:Date,default:Date.now}
+        dop:{type:Date,default:Date.now},
+        picpath:String
     },
     {
         versionKey:false

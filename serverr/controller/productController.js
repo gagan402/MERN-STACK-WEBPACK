@@ -1,3 +1,4 @@
+var path=require("path");
 const {getProductModel}=require("../model/productModel");
 
 
@@ -5,7 +6,9 @@ const Pmodel=getProductModel();
 
 function doAddProducts(req,res)
 {
-    const doc=new Pmodel(req.query);
+    // const doc=new Pmodel(req.query);
+    const doc=new Pmodel(JSON.parse(req.query.obj));
+
     doc.save().then(
         (docu)=>
         {
@@ -26,7 +29,19 @@ function doAddProducts(req,res)
     );
 }
 function doAddProductsPost(req,res)
-{   
+{   let filename="nopic.jpg";
+    if(req.files!=null)
+    {
+        filename=req.files.pic.name;
+        var fp=path.join(__dirname,"..","uploads",filename);
+        req.files.pic.mv(fp);
+        console.log(fp);
+    }
+
+    req.body.picpath=fp;
+    console.log(req.body);
+
+
     const doc=new Pmodel(req.body);
     doc.save().then(
         (docu)=>

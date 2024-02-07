@@ -5,10 +5,13 @@ const cf=require("./config/dbconfig");
 const route=require("./routers/productRouter");
 const cors=require("cors");
 const bodyParser=require("body-parser");
+const fileUpload=require("express-fileupload");
+
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended:true}));
+app.use(fileUpload());
 app.listen(2005,(err)=>
 {
     if(!err)
