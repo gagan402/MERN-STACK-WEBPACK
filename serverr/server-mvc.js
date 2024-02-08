@@ -6,6 +6,7 @@ const route=require("./routers/productRouter");
 const cors=require("cors");
 const bodyParser=require("body-parser");
 const fileUpload=require("express-fileupload");
+const router=require("./routers/profileRouter");
 
 
 app.use(cors());
@@ -43,3 +44,8 @@ app.use("/aproduct",route);
 app.use("/d-product",route);
 app.use("/al-product",route);
 app.use("/u-product",route);
+
+//profile-form
+app.use("/p-from",router);
+app.use("/se-profile",router);
+app.use("/up-profile",router)

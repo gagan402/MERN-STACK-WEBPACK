@@ -19,6 +19,7 @@ import BScards from "./bootstrapp/BScards";
 import Profile from './bootstrapp/Profile';
 import LearnTailwind from './tailwindd/LearnTailwind';
 import Learnaxios from './Learnaxios';
+import ProfileForm from './ProfileForm';
 function App() {
   return (
     <>
@@ -42,7 +43,8 @@ function App() {
     {/* <BScards></BScards> */}
     {/* <Profile></Profile> */}
     {/* <LearnTailwind></LearnTailwind> */}
-    <Learnaxios></Learnaxios>
+    {/* <Learnaxios></Learnaxios> */}
+    <ProfileForm></ProfileForm>
     </>
     
   );
