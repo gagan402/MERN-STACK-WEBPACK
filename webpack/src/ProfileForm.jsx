@@ -10,6 +10,8 @@ function ProfileForm() {
   });
 
 
+  const [photo,setPhoto]=useState("");
+
 
 function doUpdate(event)
 {
@@ -23,6 +25,8 @@ function doUpdatePic(event)
     setObj({...obj,["pic"]:event.target.files[0]});
     const ggn=event.target.files[0];
     console.log(ggn);
+    console.log("localhost:2005/"+__dirname+ggn.name);
+    setPhoto("localhost:2005/"+__dirname+ggn.name);
 }
 
 async function doSave()
@@ -46,7 +50,7 @@ async function doSearch()
     const ans=await axios.post(url,obj);
     console.log(JSON.stringify(ans));
     setObj({...ans.data});
-
+    setPhoto("http://localhost:2005/uploads/"+ans.data.picpath);
     // alert("Searched Data : "+ans.data.name+" "+ans.data.picpath);
 }
 
@@ -150,10 +154,10 @@ async function doUpdateData()
                     PNG, JPG, GIF up to 10MB
                   </p>
                 </div>
-                {/* <div className="w-[100px] border border-black h-[100px]">
-                  <img src={pp.photo}/>
+                <div className="w-[150px] border ml-4 border-black h-[150px]">
+                  <img src={photo}/>
 
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

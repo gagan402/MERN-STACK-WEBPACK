@@ -13,6 +13,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended:true}));
 app.use(fileUpload());
+app.use("/uploads",express.static("uploads"));
+
 app.listen(2005,(err)=>
 {
     if(!err)
